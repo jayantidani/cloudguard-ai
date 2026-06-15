@@ -28,9 +28,9 @@ The scanner does not modify AWS resources. Remediation commands are printed as g
 ## Setup
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -e .
+python -m pip install boto3 rich jinja2
+$env:PYTHONPATH="src"
+python -m cloudguard_ai.cli scan --region us-east-1
 ```
 
 ## Usage
@@ -78,6 +78,12 @@ HTML report written to reports\cloudguard-report.html
 ```
 
 The full terminal table and HTML report also include risk explanation, business impact, recommended fix, and a manual AWS CLI remediation command for every finding.
+
+## Screenshots
+
+### HTML Dashboard
+
+![CloudGuard AI Dashboard](screenshots_html-report.png)
 
 ## Exit Codes
 
