@@ -83,7 +83,7 @@ The full terminal table and HTML report also include risk explanation, business 
 
 ### HTML Dashboard
 
-![CloudGuard AI Dashboard](screenshots_html-report.png)
+![CloudGuard AI Dashboard](screenshots/screenshots_html-report.png)
 
 ## Exit Codes
 
