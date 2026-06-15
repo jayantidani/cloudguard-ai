@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloudguard-ai"
+version = "0.1.0"
+description = "A simple AWS security posture scanner for security groups, RDS, and S3."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3>=1.34.0",
+    "rich>=13.7.0",
+]
+
+[project.scripts]
+cloudguard-ai = "cloudguard_ai.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
